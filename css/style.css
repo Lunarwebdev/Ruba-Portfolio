@@ -2239,3 +2239,128 @@ html, body {
     padding-top: 80px;
   }
 }
+
+/* === Fix Vimeo iframe videos === */
+.portfolio-item iframe {
+  width: 100%;
+  height: 250px; /* Adjust this if you want a taller/shorter video */
+  border: none;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+/* === Fix layout for titles under videos === */
+.portfolio-item {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.portfolio-item-content {
+  position: static; /* No absolute positioning */
+  background: transparent;
+  padding-top: 10px;
+}
+
+.portfolio-item-content h3,
+.portfolio-item-content p {
+  color: #fff; /* Make text visible on dark background */
+}
+
+/* === Fix unclickable links in the footer === */
+.unslate_co--footer {
+  position: relative !important;
+  bottom: 0;
+  width: 100%;
+  background-color: #191919;
+  color: #fff;
+  z-index: 1;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.footer-site-social a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer-site-social a:hover {
+  color: #D63447; /* Optional: hover color */
+}
+
+/* Responsive video behavior */
+.responsive-video-wrapper {
+  position: relative;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.responsive-video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* === Background video full width & height === */
+.cover-v1 iframe.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  object-fit: cover;
+}
+
+/* Fullscreen background video */
+.bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100dvh; /* ✅ most reliable for mobile */
+  object-fit: cover;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Make the cover section full height */
+.cover-v1 {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Background video wrapper fills entire cover */
+.video-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.cover-v1 {
+  position: relative;
+  overflow: hidden;
+  height: 100vh; /* Optional: ensure the section fills the screen */
+}
+
+.bg-video {
+  position: absolute;  /* ⬅️ changed from fixed to absolute */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+}
