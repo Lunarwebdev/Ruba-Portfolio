@@ -69,7 +69,7 @@
                   <a href="#" class="nav-link">Work</a>
                   <ul class="dropdown">
                     <li>
-                      <a href="#portfolio-section">Directing</a>
+                      <a href="#directing-section">Directing</a>
                     </li>
                     <li>
                       <a href="#producing-section">Producing</a>
@@ -124,30 +124,32 @@
 
 
         <!-- Scroll arrow -->
-        <a href="#portfolio-section" class="mouse-wrap smoothscroll">
-          <span class="mouse"><span class="scroll"></span></span>
+       <a href="#directing-section" class="mouse-wrap smoothscroll">
+          <span class="mouse">
+            <span class="scroll"></span>
+          </span>
           <span class="mouse-label">Scroll</span>
         </a>
       </div>
 
 
       <div class="unslate_co--section py-5">
-  <div class="container">
-    <div class="d-flex justify-content-end align-items-end">
-      <h1 style="color: white; font-style: italic; font-size: 2rem; margin: 0;">
-        — on time, on point, every time.
-      </h1>
-    </div>
-  </div>
-</div>
+        <div class="container">
+          <div class="d-flex justify-content-end align-items-end">
+            <h1 style="color: white; font-style: italic; font-size: 2rem; margin: 0;">
+              — on time, on point, every time.
+            </h1>
+          </div>
+        </div>
+      </div>
 
-<!-- /.unslate_co--section -->
+      <!-- /.unslate_co--section -->
 
 
 
 
       <!-- WORK//Directing Music Videos -->
-      <div class="unslate_co--section">
+      <div class="unslate_co--section" id="directing-section">
         <div class="container">
           <div class="portfolio-wrapper">
             <div class="d-flex align-items-center mb-4 gsap-reveal gsap-reveal-filter">
@@ -257,8 +259,7 @@
               <!-- Camp 012 -->
               <div class="item col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
                 <div class="portfolio-item">
-                  <iframe
-                    src="https://player.vimeo.com/video/758426390?h=d2137bd99a?title=0&byline=0&portrait=0"
+                  <iframe src="https://player.vimeo.com/video/758426390?h=d2137bd99a?title=0&byline=0&portrait=0"
                     allowfullscreen></iframe>
                   <div class="portfolio-item-content">
                     <h3>Camp 012</h3>
@@ -443,70 +444,66 @@
         <div class="container">
           <div class="section-heading-wrap text-center mb-5">
             <h2 class="heading-h2 text-center divider"><span class="gsap-reveal">Get In Touch</span></h2>
-            <span class="gsap-reveal"><img src="images/divider.png" alt="divider" width="76"></span>
+            <span class="gsap-reveal">
+              <img src="images/divider.png" alt="divider" width="76">
+            </span>
           </div>
-
 
           <div class="row justify-content-between">
-            <div class="col-md-6">
-              <!-- Contact Form -->
-              <form action="https://formspree.io/f/mzzvbjnl" method="POST" class="form-outline-style-v1"
-                id="contactForm">
-                <div class="form-group row mb-0">
-                  <div class="col-lg-6 form-group gsap-reveal">
-                    <label for="name">Name</label>
-                    <input name="name" type="text" class="form-control" id="name" required>
-                  </div>
+  <!-- Contact Form -->
+  <div class="col-md-6">
+    <form action="https://formspree.io/f/mzzvbjnl" method="POST" class="form-outline-style-v1" onsubmit="return handleSubmit(this);">
+      <!-- Prevent redirect -->
+      <input type="hidden" name="_redirect" value="">
+      <input type="hidden" name="_subject" value="New Message from Portfolio Website">
 
-                  <div class="col-lg-6 form-group gsap-reveal">
-                    <label for="email">Email</label>
-                    <input name="email" type="email" class="form-control" id="email" required>
-                  </div>
+      <div class="form-group row mb-0">
+        <div class="col-lg-6 form-group gsap-reveal">
+          <label for="name">Name</label>
+          <input name="name" type="text" class="form-control" id="name" required>
+        </div>
+        <div class="col-lg-6 form-group gsap-reveal">
+          <label for="email">Email</label>
+          <input name="email" type="email" class="form-control" id="email" required>
+        </div>
+        <div class="col-lg-12 form-group gsap-reveal">
+          <label for="message">Write your message...</label>
+          <textarea name="message" id="message" cols="30" rows="7" class="form-control" required></textarea>
+        </div>
+      </div>
 
-                  <div class="col-lg-12 form-group gsap-reveal">
-                    <label for="message">Write your message...</label>
-                    <textarea name="message" id="message" cols="30" rows="7" class="form-control" required></textarea>
-                  </div>
+      <div class="form-group row gsap-reveal">
+        <div class="col-md-12 d-flex align-items-center">
+          <button type="submit" class="btn btn-outline-pill btn-custom-light mr-3">Send Message</button>
+        </div>
+      </div>
+    </form>
+  </div>
 
-                  <!-- Optional settings -->
-                  <input type="hidden" name="_subject" value="New message from website">
-                  <input type="hidden" name="_captcha" value="false">
-                  <!-- Optional redirect: uncomment if needed -->
-                  <!-- <input type="hidden" name="_redirect" value="https://yourdomain.com/thank-you.html"> -->
-                </div>
+  <!-- Contact Info -->
+  <div class="col-md-4">
+    <div class="contact-info-v1">
+      <div class="gsap-reveal d-block">
+        <span class="d-block contact-info-label">Email</span>
+        <a href="mailto:info@roubanoureddine.com" class="contact-info-val">info@roubanoureddine.com</a>
+      </div>
+    </div>
+  </div>
+</div>
 
-                <div class="form-group row gsap-reveal">
-                  <div class="col-md-12 d-flex align-items-center">
-                    <input type="submit" class="btn btn-outline-pill btn-custom-light mr-3" value="Send Message">
-                    <span class="submitting"></span>
-                  </div>
-                </div>
-              </form>
+<!-- JavaScript to show thank-you and clear form -->
+<script>
+  function handleSubmit(form) {
+    // Clear form fields
+    form.reset();
 
-              <!-- Message feedback -->
-              <div id="form-message-warning" class="mt-4" style="display: none; color: red;">
-                There was an error sending your message. Please try again.
-              </div>
-
-              <div id="form-message-success" style="display: none; color: green;">
-                Your message was sent, thank you!
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <!-- Contact Info -->
-              <div class="contact-info-v1">
-                <div class="gsap-reveal d-block">
-                  <span class="d-block contact-info-label">Email</span>
-                  <a href="mailto:hello@roubanoureddine.com" class="contact-info-val">hello@roubanoureddine.com</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
+    return true; // Continue form submission to Formspree
+  }
+</script>
 
         </div>
       </div>
+
     </div> <!-- END .unslate_co-site-inner -->
 
     <footer class="unslate_co--footer unslate_co--section">
@@ -558,7 +555,7 @@
 
   <script src="js/scripts-dist.js"></script>
   <script src="js/main.js"></script>
-
+  <script src="js/contact-us.js"></script>
 </body>
 
 </html>
